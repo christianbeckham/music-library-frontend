@@ -2,7 +2,7 @@
 
 ## Overview
 
-The goal of this project is to build a React.js interactive front-end application that interacts with the backend of the [music-library-backend](https://github.com/christianbeckham/music-library-backend) project.
+The goal of this project is to build a React.js interactive front-end application that interacts with the [music-library-backend](https://github.com/christianbeckham/music-library-backend) project.
 
 ## Technologies
 
