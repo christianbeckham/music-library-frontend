@@ -1,7 +1,10 @@
+import NavBar from "./components/NavBar/NavBar";
+
 const App = () => {
 	return (
 		<div>
-			<div>Hello world!</div>
+			<NavBar />
+			<div>Music Table Component</div>
 		</div>
 	);
 };
