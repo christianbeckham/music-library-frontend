@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
-const SearchBar = () => {
+const SearchBar = (props) => {
+	const { filterSongs } = props;
+	const [searchInput, setSearchInput] = useState("");
+
+	const handleOnChange = (e) => {
+		setSearchInput(e.target.value);
+		filterSongs(e.target.value);
+	};
 	return (
-		<div>
-			<input type={"search"} placeholder="Search..." />
+		<div className="input-group w-50">
+			<input
+				className="form-control"
+				type={"search"}
+				placeholder="Search..."
+				onChange={handleOnChange}
+			/>
 		</div>
 	);
 };

@@ -3,7 +3,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import AddSongButton from "../AddSongButton/AddSongButton";
 
 const NavBar = (props) => {
-	const { addSong } = props;
+	const { addSong, filterSongs } = props;
 	return (
 		<header className="row my-5">
 			<div className="col col-3 text-center">
@@ -11,7 +11,7 @@ const NavBar = (props) => {
 			</div>
 			<div className="col col-9 d-flex">
 				<AddSongButton addSong={addSong} />
-				<SearchBar />
+				<SearchBar filterSongs={filterSongs} />
 			</div>
 		</header>
 	);
