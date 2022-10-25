@@ -17,7 +17,7 @@ const AddSongButton = (props) => {
 					header={"Add Song"}
 					show={showModal}
 					toggle={toggleModal}
-					addSong={addSong}
+					callbackFunction={addSong}
 				/>
 			)}
 		</div>
