@@ -8,7 +8,7 @@ const SongList = (props) => {
 		<table className="table table-hover">
 			<thead>
 				<tr>
-					<th>Song</th>
+					<th>Title</th>
 					<th>Artist</th>
 					<th>Album</th>
 					<th>Genre</th>

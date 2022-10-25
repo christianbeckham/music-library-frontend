@@ -38,7 +38,7 @@ const SongModalForm = (props) => {
 			<Modal.Body>
 				<Form noValidate validated={validated} onSubmit={hanldeOnSubmit}>
 					<Form.Group className="mb-3" controlId="formTitleInput">
-						<Form.Label>Song</Form.Label>
+						<Form.Label>Title</Form.Label>
 						<Form.Control
 							size="sm"
 							type="text"
