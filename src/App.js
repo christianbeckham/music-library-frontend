@@ -7,20 +7,33 @@ const App = () => {
 	const [songs, setSongs] = useState([]);
 
 	useEffect(() => {
-		const fetchSongs = async () => {
-			try {
-				const response = await axios.get("http://localhost:8000/api/music/");
-				setSongs(response.data);
-			} catch (error) {
-				console.log(error);
-			}
-		};
 		fetchSongs();
 	}, []);
 
+	const fetchSongs = async () => {
+		try {
+			const response = await axios.get("http://localhost:8000/api/music/");
+			setSongs(response.data);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	const addSong = async (data) => {
+		try {
+			const response = await axios.post(
+				"http://localhost:8000/api/music/",
+				data
+			);
+			if (response.status === 201) fetchSongs();
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 	return (
 		<div>
-			<NavBar />
+			<NavBar addSong={addSong} />
 			<div className="container m-auto">
 				<SongList songs={songs} />
 			</div>
