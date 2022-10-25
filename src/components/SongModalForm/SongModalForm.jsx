@@ -94,7 +94,7 @@ const SongModalForm = (props) => {
 					</Form.Group>
 					<Modal.Footer>
 						<Button variant="success" type="submit">
-							Add
+							Save
 						</Button>
 						<Button variant="danger" onClick={handleOnClose}>
 							Cancel
