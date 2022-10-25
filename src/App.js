@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import NavBar from "./components/NavBar/NavBar";
 import SongList from "./components/SongList/SongList";
@@ -21,7 +21,9 @@ const App = () => {
 	return (
 		<div>
 			<NavBar />
-			<SongList songs={songs} />
+			<div className="container m-auto">
+				<SongList songs={songs} />
+			</div>
 		</div>
 	);
 };
