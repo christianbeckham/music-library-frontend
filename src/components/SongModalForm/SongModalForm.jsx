@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 
 const SongModalForm = (props) => {
-	const { header, show, toggle, song, addSong } = props;
-	const [values, setValues] = useState(song || {});
+	const { header, show, toggle, songObject, callbackFunction } = props;
+	const [values, setValues] = useState(songObject || {});
 	const [validated, setValidated] = useState(false);
 
 	const handleOnChange = (e) => {
@@ -23,7 +23,7 @@ const SongModalForm = (props) => {
 		const form = e.currentTarget;
 		if (form.checkValidity()) {
 			e.stopPropagation();
-			addSong(values);
+			callbackFunction(values);
 			handleOnClose();
 		} else {
 			setValidated(true);
