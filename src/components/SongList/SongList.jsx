@@ -2,10 +2,10 @@ import React from "react";
 import Song from "../Song/Song";
 
 const SongList = (props) => {
-	const { songs } = props;
+	const { songs, updateSong } = props;
 
 	return (
-		<table>
+		<table className="table table-hover">
 			<thead>
 				<tr>
 					<th>Song</th>
@@ -13,12 +13,12 @@ const SongList = (props) => {
 					<th>Album</th>
 					<th>Genre</th>
 					<th>Release Date</th>
-					<th>Likes</th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
 				{songs.map((song) => (
-					<Song key={song.id} {...song} />
+					<Song key={song.id} song={song} updateSong={updateSong} />
 				))}
 			</tbody>
 		</table>

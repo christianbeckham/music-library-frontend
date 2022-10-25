@@ -1,7 +1,9 @@
 import React from "react";
+import EditSongButton from "../EditSongButton/EditSongButton";
 
 const Song = (props) => {
-	const { title, artist, album, genre, release_date, likes_count } = props;
+  const { updateSong } = props;
+	const { title, artist, album, genre, release_date } = props.song;
 
 	return (
 		<tr>
@@ -10,7 +12,9 @@ const Song = (props) => {
 			<td>{album}</td>
 			<td>{genre}</td>
 			<td>{release_date}</td>
-			<td>{likes_count}</td>
+			<td>
+				<EditSongButton songObject={props.song} updateSong={updateSong} />
+			</td>
 		</tr>
 	);
 };
