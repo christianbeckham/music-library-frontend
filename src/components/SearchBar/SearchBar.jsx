@@ -12,8 +12,9 @@ const SearchBar = (props) => {
 		<div className="input-group w-50">
 			<input
 				className="form-control"
-				type={"search"}
+				type="search"
 				placeholder="Search..."
+				value={searchInput}
 				onChange={handleOnChange}
 			/>
 		</div>
