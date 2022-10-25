@@ -12,12 +12,14 @@ const AddSongButton = (props) => {
 			<Button className="" variant="success" onClick={toggleModal}>
 				+
 			</Button>
-			<SongModalForm
-				header={"New Song"}
-				show={showModal}
-				toggle={toggleModal}
-				addSong={addSong}
-			/>
+			{showModal && (
+				<SongModalForm
+					header={"Add Song"}
+					show={showModal}
+					toggle={toggleModal}
+					addSong={addSong}
+				/>
+			)}
 		</div>
 	);
 };
