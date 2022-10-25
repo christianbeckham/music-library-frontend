@@ -31,13 +31,13 @@ const SongModalForm = (props) => {
 	};
 
 	return (
-		<Modal show={show} onHide={toggle}>
+		<Modal show={show} onHide={toggle} backdrop="static">
 			<Modal.Header closeButton>
 				<Modal.Title>{header}</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
 				<Form noValidate validated={validated} onSubmit={hanldeOnSubmit}>
-					<Form.Group controlId="songTitle">
+					<Form.Group className="mb-3" controlId="formTitleInput">
 						<Form.Label>Song</Form.Label>
 						<Form.Control
 							size="sm"
@@ -48,7 +48,7 @@ const SongModalForm = (props) => {
 							required
 						/>
 					</Form.Group>
-					<Form.Group controlId="songTitle">
+					<Form.Group className="mb-3" controlId="formArtistInput">
 						<Form.Label>Artist</Form.Label>
 						<Form.Control
 							size="sm"
@@ -59,7 +59,7 @@ const SongModalForm = (props) => {
 							required
 						/>
 					</Form.Group>
-					<Form.Group>
+					<Form.Group className="mb-3" controlId="formAlbumInput">
 						<Form.Label>Album</Form.Label>
 						<Form.Control
 							size="sm"
@@ -70,7 +70,7 @@ const SongModalForm = (props) => {
 							required
 						/>
 					</Form.Group>
-					<Form.Group>
+					<Form.Group className="mb-3" controlId="formGenreInput">
 						<Form.Label>Genre</Form.Label>
 						<Form.Control
 							size="sm"
@@ -81,7 +81,7 @@ const SongModalForm = (props) => {
 							required
 						/>
 					</Form.Group>
-					<Form.Group>
+					<Form.Group className="mb-3" controlId="formDateInput">
 						<Form.Label>Release Date</Form.Label>
 						<Form.Control
 							size="sm"
