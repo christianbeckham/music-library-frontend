@@ -31,9 +31,27 @@ const App = () => {
 		}
 	};
 
+	const filterSongs = (input) => {
+		if (input.length > 2) {
+			const filteredSongs = songs.reduce((arr, song) => {
+				Object.keys(song).forEach((key) => {
+					if (typeof song[key] === "string") {
+						if (song[key].toLowerCase().includes(input.toLowerCase())) {
+							arr.push(song);
+						}
+					}
+				});
+				return arr;
+			}, []);
+			setSongs(filteredSongs);
+		} else {
+			fetchSongs();
+		}
+	};
+
 	return (
 		<div>
-			<NavBar addSong={addSong} />
+			<NavBar addSong={addSong} filterSongs={filterSongs} />
 			<div className="container m-auto">
 				<SongList songs={songs} />
 			</div>
