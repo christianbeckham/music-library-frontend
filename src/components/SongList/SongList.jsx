@@ -5,11 +5,23 @@ const SongList = (props) => {
 	const { songs } = props;
 
 	return (
-		<div>
-			{songs.map((song) => (
-				<Song key={song.id} {...song} />
-			))}
-		</div>
+		<table>
+			<thead>
+				<tr>
+					<th>Song</th>
+					<th>Artist</th>
+					<th>Album</th>
+					<th>Genre</th>
+					<th>Release Date</th>
+					<th>Likes</th>
+				</tr>
+			</thead>
+			<tbody>
+				{songs.map((song) => (
+					<Song key={song.id} {...song} />
+				))}
+			</tbody>
+		</table>
 	);
 };
 
