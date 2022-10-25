@@ -49,11 +49,32 @@ const App = () => {
 		}
 	};
 
+	const updateSong = async (data) => {
+		try {
+			const songId = data.id;
+			const keysToExclude = ["id", "likes_count"];
+			const updateValues = Object.entries(data).reduce((obj, [key, value]) => {
+				if (keysToExclude.includes(key) === false) {
+					obj[key] = value;
+				}
+				return obj;
+			}, {});
+
+			const response = await axios.put(
+				`http://localhost:8000/api/music/${songId}/`,
+				updateValues
+			);
+			if (response.status === 200) fetchSongs();
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 	return (
 		<div>
 			<NavBar addSong={addSong} filterSongs={filterSongs} />
 			<div className="container m-auto">
-				<SongList songs={songs} />
+				<SongList songs={songs} updateSong={updateSong} />
 			</div>
 		</div>
 	);
