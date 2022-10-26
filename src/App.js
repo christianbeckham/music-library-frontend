@@ -70,11 +70,26 @@ const App = () => {
 		}
 	};
 
+	const deleteSong = async (songId) => {
+		try {
+			const response = await axios.delete(
+				`http://localhost:8000/api/music/${songId}/`
+			);
+			if (response.status === 204) fetchSongs();
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 	return (
 		<div>
 			<NavBar addSong={addSong} filterSongs={filterSongs} />
 			<div className="container m-auto">
-				<SongList songs={songs} updateSong={updateSong} />
+				<SongList
+					songs={songs}
+					updateSong={updateSong}
+					deleteSong={deleteSong}
+				/>
 			</div>
 		</div>
 	);
