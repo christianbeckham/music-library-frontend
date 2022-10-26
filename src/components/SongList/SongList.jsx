@@ -2,7 +2,7 @@ import React from "react";
 import Song from "../Song/Song";
 
 const SongList = (props) => {
-	const { songs, updateSong } = props;
+	const { songs, updateSong, deleteSong } = props;
 
 	return (
 		<table className="table table-hover">
@@ -18,7 +18,12 @@ const SongList = (props) => {
 			</thead>
 			<tbody>
 				{songs.map((song) => (
-					<Song key={song.id} song={song} updateSong={updateSong} />
+					<Song
+						key={song.id}
+						song={song}
+						updateSong={updateSong}
+						deleteSong={deleteSong}
+					/>
 				))}
 			</tbody>
 		</table>
