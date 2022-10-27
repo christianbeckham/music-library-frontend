@@ -4,7 +4,7 @@ import DeleteSongButton from "../DeleteSongButton/DeleteSongButton";
 
 const Song = (props) => {
 	const { updateSong, deleteSong } = props;
-	const { id, title, artist, album, genre, release_date } = props.song;
+	const { title, artist, album, genre, release_date } = props.song;
 
 	return (
 		<tr>
@@ -15,7 +15,7 @@ const Song = (props) => {
 			<td>{release_date}</td>
 			<td className="d-flex">
 				<EditSongButton songObject={props.song} updateSong={updateSong} />
-				<DeleteSongButton songId={id} deleteSong={deleteSong} />
+				<DeleteSongButton song={props.song} deleteSong={deleteSong} />
 			</td>
 		</tr>
 	);
