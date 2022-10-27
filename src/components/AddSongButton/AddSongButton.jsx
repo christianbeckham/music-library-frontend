@@ -9,8 +9,8 @@ const AddSongButton = (props) => {
 
 	return (
 		<div>
-			<Button className="" variant="success" onClick={toggleModal}>
-				+
+			<Button className="mx-2" variant="success" onClick={toggleModal}>
+				<i className="bi-plus-lg" role="img" aria-label="add icon"></i>
 			</Button>
 			{showModal && (
 				<SongModalForm

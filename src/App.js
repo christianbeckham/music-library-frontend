@@ -84,7 +84,7 @@ const App = () => {
 	return (
 		<div>
 			<NavBar addSong={addSong} filterSongs={filterSongs} />
-			<div className="container m-auto">
+			<div className="container m-auto pt-5 h-100">
 				<SongList
 					songs={songs}
 					updateSong={updateSong}

@@ -9,8 +9,13 @@ const EditSongButton = (props) => {
 
 	return (
 		<div>
-			<Button variant="primary" onClick={toggleModal}>
-				Edit
+			<Button
+				className="mx-1"
+				variant="primary"
+				size="sm"
+				onClick={toggleModal}
+			>
+				<i className="bi-pencil" role="img" aria-label="edit icon"></i>
 			</Button>
 			{showModal && (
 				<SongModalForm
