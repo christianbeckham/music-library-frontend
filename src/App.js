@@ -32,7 +32,7 @@ const App = () => {
 	};
 
 	const filterSongs = (input) => {
-		if (input.length > 2) {
+		if (input.length > 1) {
 			const filteredSongs = songs.reduce((arr, song) => {
 				Object.keys(song).forEach((key) => {
 					if (typeof song[key] === "string") {
