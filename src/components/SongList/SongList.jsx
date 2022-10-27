@@ -7,7 +7,7 @@ const SongList = (props) => {
 	return (
 		<>
 			<h1>Songs</h1>
-			<table className="table table-dark table-hover table-borderles align-middle">
+			<table className="table table-dark table-hover align-middle">
 				<thead className="table-dark">
 					<tr>
 						<th>Title</th>
