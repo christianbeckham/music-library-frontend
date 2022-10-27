@@ -31,8 +31,13 @@ const SongModalForm = (props) => {
 	};
 
 	return (
-		<Modal show={show} onHide={toggle} backdrop="static">
-			<Modal.Header closeButton>
+		<Modal
+			contentClassName="modal-bg-dark"
+			show={show}
+			onHide={toggle}
+			backdrop="static"
+		>
+			<Modal.Header closeButton closeVariant="white">
 				<Modal.Title>{header}</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
