@@ -1,0 +1,31 @@
+:root {
+	--color-dark: #212529;
+	--color-white: #fff;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--color-dark);
+	color: var(--color-white);
+}
+
+.logo {
+	font-size: 3.5rem;
+	color: var(--color-white);
+}
+
+.modal-bg-dark {
+	background-color: var(--color-dark);
+	color: var(--color-white);
+}
