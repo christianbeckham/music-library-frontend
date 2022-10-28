@@ -51,6 +51,7 @@ const SongModalForm = (props) => {
 							value={values.title || ""}
 							onChange={handleOnChange}
 							required
+							data-test="title-input"
 						/>
 					</Form.Group>
 					<Form.Group className="mb-3" controlId="formArtistInput">
@@ -62,6 +63,7 @@ const SongModalForm = (props) => {
 							value={values.artist || ""}
 							onChange={handleOnChange}
 							required
+							data-test="artist-input"
 						/>
 					</Form.Group>
 					<Form.Group className="mb-3" controlId="formAlbumInput">
@@ -73,6 +75,7 @@ const SongModalForm = (props) => {
 							value={values.album || ""}
 							onChange={handleOnChange}
 							required
+							data-test="album-input"
 						/>
 					</Form.Group>
 					<Form.Group className="mb-3" controlId="formGenreInput">
@@ -84,6 +87,7 @@ const SongModalForm = (props) => {
 							value={values.genre || ""}
 							onChange={handleOnChange}
 							required
+							data-test="genre-input"
 						/>
 					</Form.Group>
 					<Form.Group className="mb-3" controlId="formDateInput">
@@ -95,13 +99,22 @@ const SongModalForm = (props) => {
 							value={values.release_date || ""}
 							onChange={handleOnChange}
 							required
+							data-test="date-input"
 						/>
 					</Form.Group>
 					<Modal.Footer>
-						<Button variant="success" type="submit">
+						<Button
+							variant="success"
+							type="submit"
+							data-test="modalFormSaveBtn"
+						>
 							Save
 						</Button>
-						<Button variant="danger" onClick={handleOnClose}>
+						<Button
+							variant="danger"
+							onClick={handleOnClose}
+							data-test="modalFormCancelBtn"
+						>
 							Cancel
 						</Button>
 					</Modal.Footer>
