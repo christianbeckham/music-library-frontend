@@ -18,7 +18,7 @@ const SongList = (props) => {
 						<th></th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody data-test="song-table-body">
 					{songs.map((song) => (
 						<Song
 							key={song.id}
