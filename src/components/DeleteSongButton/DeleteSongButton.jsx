@@ -16,7 +16,13 @@ const DeleteSongButton = (props) => {
 
 	return (
 		<div>
-			<Button className="mx-1" variant="danger" size="sm" onClick={toggleAlert}>
+			<Button
+				className="mx-1"
+				variant="danger"
+				size="sm"
+				onClick={toggleAlert}
+				data-test="deleteSongBtn"
+			>
 				<i className="bi-x-lg" role="img" aria-label="delete icon"></i>
 			</Button>
 			{showAlertModal && (
@@ -41,7 +47,11 @@ const DeleteSongButton = (props) => {
 						</p>
 					</Modal.Body>
 					<Modal.Footer>
-						<Button variant="danger" onClick={handleOnClickDelete}>
+						<Button
+							variant="danger"
+							onClick={handleOnClickDelete}
+							data-test="deleteSongModalBtn"
+						>
 							Delete
 						</Button>
 						<Button variant="secondary" onClick={handleOnClickCancel}>
