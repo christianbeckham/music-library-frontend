@@ -14,6 +14,7 @@ const EditSongButton = (props) => {
 				variant="primary"
 				size="sm"
 				onClick={toggleModal}
+				data-test="edit-song-btn"
 			>
 				<i className="bi-pencil" role="img" aria-label="edit icon"></i>
 			</Button>
