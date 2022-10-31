@@ -35,6 +35,16 @@ Cypress.Commands.add("createSong", (songObject) => {
 	cy.get('[data-test="modalFormSaveBtn"]').click();
 });
 
+Cypress.Commands.add("deleteSong", (songTitle) => {
+	cy.visit("http://localhost:3000");
+	cy.get('[data-test="song-table-body"]')
+		.contains(songTitle)
+		.parents("tr")
+		.find('[data-test="deleteSongBtn"]')
+		.click();
+	cy.get('[data-test="deleteSongModalBtn"]').click();
+});
+
 Cypress.Commands.add("addSongAPI", (songObject) => {
-	return cy.request("POST", `http:localhost:8000/api/music/`, songObject);
+	return cy.request("POST", `http://localhost:8000/api/music/`, songObject);
 });
