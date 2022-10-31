@@ -34,3 +34,7 @@ Cypress.Commands.add("createSong", (songObject) => {
 	cy.get('[data-test="date-input"]').type(songObject.release_date);
 	cy.get('[data-test="modalFormSaveBtn"]').click();
 });
+
+Cypress.Commands.add("addSongAPI", (songObject) => {
+	return cy.request("POST", `http:localhost:8000/api/music/`, songObject);
+});
